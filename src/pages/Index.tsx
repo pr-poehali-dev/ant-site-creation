@@ -130,6 +130,52 @@ export default function Index() {
         </div>
       </section>
 
+      <section id="trust" className="px-6 py-20 max-w-6xl mx-auto">
+        <div className="mb-14 border-b border-border pb-8">
+          <p className="text-accent text-sm tracking-[0.3em] uppercase mb-3">Доверие</p>
+          <h2 className="font-display text-5xl">Нам доверяют —<br />и возвращаются</h2>
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden mb-12">
+          {[
+            { value: '5.0 ★', label: 'рейтинг на 2ГИС' },
+            { value: '79', label: 'реальных оценок' },
+            { value: '7-е место', label: 'во Владивостоке по ламинированию бровей (Zoon.ru)' },
+          ].map((m) => (
+            <div key={m.label} className="bg-card px-8 py-10 text-center">
+              <p className="font-display text-5xl mb-3 text-accent">{m.value}</p>
+              <p className="text-sm text-muted-foreground leading-snug">{m.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-10">
+          {[
+            {
+              text: '«Хочу поблагодарить мастера Анну — всегда тепло принимает, бровки получаются очень натуральные. Приятный мастер и профессионал своего дела.»',
+              source: 'клиентка, Zoon.ru',
+            },
+            {
+              text: '«Сделала пептидный уход Loreal Molecular у Эльвиры — волосы стали плотнее, живее, появился блеск. Очень довольна результатом!»',
+              source: 'клиентка, Zoon.ru',
+            },
+          ].map((r, i) => (
+            <div key={i} className="bg-card border border-border rounded-2xl p-8 flex flex-col justify-between gap-6">
+              <p className="text-base leading-relaxed text-foreground">{r.text}</p>
+              <p className="text-xs text-muted-foreground">— {r.source}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-accent/10 border border-accent/25 rounded-2xl px-8 py-6 flex items-center gap-5">
+          <span className="text-3xl shrink-0">🎁</span>
+          <div>
+            <p className="font-medium mb-1">Акция: услуга в 4 руки</p>
+            <p className="text-sm text-muted-foreground">Приходи с подругой, сделайте всё вместе и сэкономьте время</p>
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="px-6 py-24 bg-secondary/40 border-y border-border">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
