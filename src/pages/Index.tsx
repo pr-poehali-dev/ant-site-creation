@@ -181,6 +181,57 @@ export default function Index() {
         </div>
       </section>
 
+      <section id="portfolio" className="px-6 py-20 bg-secondary/50 border-y border-border">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-end justify-between mb-14 border-b border-border pb-8">
+            <div>
+              <p className="text-accent text-sm tracking-[0.3em] uppercase mb-3">Портфолио</p>
+              <h2 className="font-display text-5xl">Наши работы —<br />лучший аргумент</h2>
+            </div>
+            <p className="hidden md:block text-muted-foreground text-sm max-w-xs text-right">
+              Каждая фотография — это реальный результат, который вы можете получить
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
+            {[
+              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/31856dff-d09b-4cbc-8348-c7e28a4c8872.jpg', cat: '💅 Маникюр', label: 'Нюд-маникюр · гель-лак', price: 'от 2 900 ₽' },
+              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/78544b81-1792-4b71-bfb5-7e495b65c670.jpg', cat: '💅 Маникюр', label: 'Миндаль · натуральные оттенки', price: 'от 2 900 ₽' },
+              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/59dbec12-1720-4e09-a978-9835e1aefe48.jpg', cat: '🌿 Брови', label: 'Ламинирование бровей', price: 'от 2 300 ₽' },
+              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/a1b4cdbf-aa02-4db3-84c2-90ed11a9c73e.jpg', cat: '✂️ Волосы', label: 'Укладка + стрижка', price: 'от 2 200 ₽' },
+              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/7d167e63-43d1-41fc-bb01-8dbfa0b6c794.jpg', cat: '🦶 Педикюр', label: 'Педикюр + гель-лак · нюд', price: 'от 3 300 ₽' },
+              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/a29c2d99-7ef4-4ba2-b837-ea6d0a201b46.jpg', cat: '🦶 Педикюр', label: 'Педикюр · французский', price: 'от 2 800 ₽' },
+            ].map((item, i) => (
+              <div key={i} className="group relative aspect-square overflow-hidden rounded-2xl bg-muted">
+                <img
+                  src={item.img}
+                  alt={item.label}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <p className="text-xs text-primary-foreground/70 mb-0.5">{item.cat}</p>
+                  <p className="text-sm font-medium text-primary-foreground leading-tight">{item.label}</p>
+                  <p className="text-xs text-primary-foreground/80 mt-1">{item.price}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a
+              href="https://www.instagram.com/accents_space"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-border rounded-full text-sm font-medium hover:bg-card hover:border-foreground transition-colors"
+            >
+              📸 Смотреть больше работ в Instagram
+              <Icon name="ExternalLink" size={15} />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="px-6 py-24 bg-secondary/40 border-y border-border">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
