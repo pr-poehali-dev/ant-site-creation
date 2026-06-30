@@ -1,26 +1,31 @@
+import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 const HERO_IMG =
   'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/89d557a9-b914-4fcb-891c-612c2bedc8b3.jpg';
 
 export default function Index() {
+  const [form, setForm] = useState({ name: '', phone: '', service: '' });
+  const [sent, setSent] = useState(false);
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSent(true);
+  }
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/20">
-      <div className="pointer-events-none fixed top-1/3 left-0 z-0 w-8 opacity-[0.07]">
-        <Icon name="Bug" className="ant-track" size={28} />
-      </div>
-
       <header className="fixed top-0 z-40 w-full backdrop-blur-md bg-background/70 border-b border-border/60">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="font-display text-2xl tracking-tight">
             Акценты<span className="text-accent">.</span>
           </span>
-          <nav className="hidden sm:flex gap-8 text-sm text-muted-foreground">
-            <a href="#hero" className="hover:text-accent transition-colors">Главная</a>
-            <a href="#species" className="hover:text-accent transition-colors">Услуги</a>
-            <a href="#about" className="hover:text-accent transition-colors">О салоне</a>
-          </nav>
+          <a
+            href="#booking"
+            className="text-sm font-medium px-5 py-2 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-colors"
+          >
+            Записаться
+          </a>
         </div>
       </header>
 
@@ -219,9 +224,120 @@ export default function Index() {
         </div>
       </section>
 
-      <footer className="px-6 py-12 max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+      <section id="booking" className="px-6 py-24 bg-primary text-primary-foreground">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+          <div>
+            <p className="text-primary-foreground/60 text-sm tracking-[0.3em] uppercase mb-6">Запись</p>
+            <h2 className="font-display text-5xl md:text-6xl leading-[1.0] mb-6">
+              Запишитесь прямо сейчас —
+              <br />
+              <span className="italic opacity-70">и приходите отдохнуть</span>
+            </h2>
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-10">
+              Без долгих ожиданий. Только вы, мастер и результат, который вам понравится.
+            </p>
+
+            <div className="flex flex-col gap-3">
+              <a
+                href="https://wa.me/79089999105"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
+              >
+                <span className="text-lg">📱</span> WhatsApp
+              </a>
+              <a
+                href="https://t.me/+79089999105"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
+              >
+                <span className="text-lg">✈️</span> Telegram
+              </a>
+              <a
+                href="tel:+79089999105"
+                className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
+              >
+                <span className="text-lg">📞</span> +7 (908) 999-91-05
+              </a>
+            </div>
+
+            <div className="mt-10 flex items-start gap-3 text-sm text-primary-foreground/60">
+              <Icon name="MapPin" size={16} className="mt-0.5 shrink-0" />
+              <span>Владивосток, ул. Брусничная, 3 (Советский район)<br />Ежедневно 9:00–20:00</span>
+            </div>
+          </div>
+
+          <div className="bg-primary-foreground/10 border border-primary-foreground/15 rounded-2xl p-8">
+            {sent ? (
+              <div className="flex flex-col items-center justify-center h-full min-h-[280px] text-center gap-4">
+                <span className="text-5xl">✅</span>
+                <h3 className="font-display text-3xl">Заявка отправлена!</h3>
+                <p className="text-primary-foreground/70">Перезвоним в течение 15 минут в рабочее время</p>
+                <button
+                  onClick={() => { setSent(false); setForm({ name: '', phone: '', service: '' }); }}
+                  className="mt-4 text-sm underline underline-offset-4 opacity-60 hover:opacity-100 transition-opacity"
+                >
+                  Отправить ещё раз
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                <div>
+                  <label className="block text-xs text-primary-foreground/60 mb-2 tracking-wide">Ваше имя</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Анна"
+                    value={form.name}
+                    onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+                    className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-xl px-4 py-3 text-sm placeholder:text-primary-foreground/30 focus:outline-none focus:border-primary-foreground/50 transition-colors"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs text-primary-foreground/60 mb-2 tracking-wide">Телефон / WhatsApp</label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+7 (___) ___-__-__"
+                    value={form.phone}
+                    onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
+                    className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-xl px-4 py-3 text-sm placeholder:text-primary-foreground/30 focus:outline-none focus:border-primary-foreground/50 transition-colors"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs text-primary-foreground/60 mb-2 tracking-wide">Услуга</label>
+                  <select
+                    value={form.service}
+                    onChange={e => setForm(f => ({ ...f, service: e.target.value }))}
+                    className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary-foreground/50 transition-colors appearance-none"
+                  >
+                    <option value="" className="bg-foreground text-background">Выберите услугу</option>
+                    <option value="nails" className="bg-foreground text-background">💅 Ногтевой сервис</option>
+                    <option value="hair" className="bg-foreground text-background">✂️ Парикмахерский зал</option>
+                    <option value="brows" className="bg-foreground text-background">🌿 Брови и ресницы</option>
+                    <option value="makeup" className="bg-foreground text-background">💄 Макияж</option>
+                  </select>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-primary-foreground text-primary font-medium py-3.5 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                >
+                  Записаться
+                  <Icon name="ArrowRight" size={16} />
+                </button>
+                <p className="text-xs text-primary-foreground/50 text-center">
+                  Перезвоним в течение 15 минут в рабочее время
+                </p>
+              </form>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <footer className="px-6 py-10 max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
         <span className="font-display text-xl text-foreground">Акценты<span className="text-accent">.</span></span>
-        <span>© 2026 · Пространство красоты «Акценты»</span>
+        <span>© 2026 · Пространство красоты «Акценты» · Владивосток</span>
       </footer>
 
 
