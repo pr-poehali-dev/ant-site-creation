@@ -1,98 +1,9 @@
-import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 const HERO_IMG =
   'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/89d557a9-b914-4fcb-891c-612c2bedc8b3.jpg';
 
-interface Species {
-  id: string;
-  latin: string;
-  name: string;
-  family: string;
-  size: string;
-  habitat: string;
-  colony: string;
-  fact: string;
-  description: string;
-}
-
-const SPECIES: Species[] = [
-  {
-    id: '01',
-    latin: 'Camponotus',
-    name: 'Муравей-древоточец',
-    family: 'Formicinae',
-    size: '7–14 мм',
-    habitat: 'Леса умеренной зоны',
-    colony: 'до 50 000 особей',
-    fact: 'Строит гнёзда внутри древесины, не поедая её',
-    description:
-      'Крупнейшие муравьи Европы. Прокладывают галереи в мёртвой и живой древесине, создавая многоуровневые гнёзда. Активны ночью, питаются падью тлей и насекомыми.',
-  },
-  {
-    id: '02',
-    latin: 'Formica rufa',
-    name: 'Рыжий лесной муравей',
-    family: 'Formicinae',
-    size: '4–9 мм',
-    habitat: 'Хвойные леса',
-    colony: 'до 1 000 000 особей',
-    fact: 'Возводит купола из хвои высотой более метра',
-    description:
-      'Главный санитар леса. За день муравейник уничтожает тысячи вредных насекомых. Поддерживает постоянную температуру внутри купола благодаря солнечному теплу и брожению.',
-  },
-  {
-    id: '03',
-    latin: 'Atta',
-    name: 'Муравей-листорез',
-    family: 'Myrmicinae',
-    size: '2–16 мм',
-    habitat: 'Тропики Америки',
-    colony: 'до 8 000 000 особей',
-    fact: 'Выращивает грибные сады из пережёванных листьев',
-    description:
-      'Первые земледельцы планеты. Не едят листья напрямую, а используют их как субстрат для разведения особого гриба — единственного источника пищи. Колония имеет строгую кастовую систему.',
-  },
-  {
-    id: '04',
-    latin: 'Eciton burchellii',
-    name: 'Кочевой муравей',
-    family: 'Dorylinae',
-    size: '3–12 мм',
-    habitat: 'Тропические леса',
-    colony: 'до 700 000 особей',
-    fact: 'Не строит гнёзд — живёт в живых «биваках» из тел',
-    description:
-      'Хищники-кочевники. Образуют гигантские рейды шириной до 20 метров, сметая всё на пути. Из собственных тел строят временные укрытия — биваки, сцепляясь лапками.',
-  },
-  {
-    id: '05',
-    latin: 'Paraponera clavata',
-    name: 'Муравей-пуля',
-    family: 'Paraponerinae',
-    size: '18–30 мм',
-    habitat: 'Дождевые леса',
-    colony: 'до 1 000 особей',
-    fact: 'Обладает сильнейшим жалом среди насекомых',
-    description:
-      'Назван за укус, который сравнивают с огнестрельным ранением. Боль длится до суток. Несмотря на грозную репутацию, ведёт скрытный образ жизни в небольших колониях.',
-  },
-  {
-    id: '06',
-    latin: 'Solenopsis invicta',
-    name: 'Огненный муравей',
-    family: 'Myrmicinae',
-    size: '2–6 мм',
-    habitat: 'Тёплые регионы',
-    colony: 'до 250 000 особей',
-    fact: 'Во время паводка сцепляется в живой плот',
-    description:
-      'Один из самых инвазивных видов. При наводнении колония превращается в плавучий шар из тел, способный держаться на воде неделями, защищая матку и личинок.',
-  },
-];
-
 export default function Index() {
-  const [active, setActive] = useState<Species | null>(null);
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/20">
@@ -159,42 +70,63 @@ export default function Index() {
       <section id="species" className="px-6 py-20 max-w-6xl mx-auto">
         <div className="flex items-end justify-between mb-14 border-b border-border pb-8">
           <div>
-            <p className="text-accent text-sm tracking-[0.3em] uppercase mb-3">Каталог</p>
-            <h2 className="font-display text-5xl">Виды муравьёв</h2>
+            <p className="text-accent text-sm tracking-[0.3em] uppercase mb-3">Услуги</p>
+            <h2 className="font-display text-5xl">Всё, что нужно —<br />в одном месте</h2>
           </div>
           <p className="hidden md:block text-muted-foreground text-sm max-w-xs text-right">
-            Шесть удивительных видов с описанием их характеристик и образа жизни.
+            Приходи на одну услугу, уходи обновлённой — или доверь нам весь образ сразу
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden">
-          {SPECIES.map((s) => (
-            <button
-              key={s.id}
-              onClick={() => setActive(s)}
-              className="group text-left bg-card p-8 hover:bg-secondary transition-colors duration-300 flex flex-col"
+        <div className="grid sm:grid-cols-2 gap-px bg-border rounded-2xl overflow-hidden mb-10">
+          {[
+            {
+              emoji: '💅',
+              title: 'Ногтевой сервис',
+              desc: 'Маникюр и педикюр: обрезной, аппаратный, комбинированный, японский · покрытие гель-лак · наращивание',
+              from: 'от 1 800 ₽',
+            },
+            {
+              emoji: '✂️',
+              title: 'Парикмахерский зал',
+              desc: 'Стрижки женские, мужские, детские · окрашивание · Air Touch · уходы L\'Oréal Molecular и Davines',
+              from: 'от 1 200 ₽',
+            },
+            {
+              emoji: '🌿',
+              title: 'Брови и ресницы',
+              desc: 'Коррекция · окрашивание · долговременная укладка · ботокс для бровей · ламинирование ресниц',
+              from: 'от 1 100 ₽',
+            },
+            {
+              emoji: '💄',
+              title: 'Макияж',
+              desc: 'Дневной, вечерний, свадебный, для фотосессии',
+              from: 'от 3 500 ₽',
+            },
+          ].map((s) => (
+            <div
+              key={s.title}
+              className="group bg-card p-8 hover:bg-secondary transition-colors duration-300 flex flex-col"
             >
-              <div className="flex items-center justify-between mb-8">
-                <span className="font-display text-xl text-muted-foreground">{s.id}</span>
-                <Icon
-                  name="ArrowUpRight"
-                  size={20}
-                  className="text-muted-foreground group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
-                />
+              <div className="flex items-start justify-between mb-6">
+                <span className="text-4xl">{s.emoji}</span>
+                <span className="font-display text-2xl text-accent">{s.from}</span>
               </div>
-              <p className="text-xs italic text-accent mb-2">{s.latin}</p>
-              <h3 className="font-display text-2xl mb-4 leading-tight">{s.name}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">{s.fact}</p>
-              <div className="flex gap-4 text-xs text-muted-foreground border-t border-border/60 pt-4">
-                <span className="flex items-center gap-1">
-                  <Icon name="Ruler" size={13} /> {s.size}
-                </span>
-                <span className="flex items-center gap-1">
-                  <Icon name="Users" size={13} /> {s.colony}
-                </span>
-              </div>
-            </button>
+              <h3 className="font-display text-2xl mb-3 leading-tight">{s.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed flex-1">{s.desc}</p>
+            </div>
           ))}
+        </div>
+
+        <div className="text-center">
+          <a
+            href="#booking"
+            className="inline-flex items-center gap-2 px-8 py-4 border border-border rounded-full text-sm font-medium hover:bg-secondary hover:border-foreground transition-colors"
+          >
+            📋 Смотреть полный прайс
+            <Icon name="ExternalLink" size={15} />
+          </a>
         </div>
       </section>
 
@@ -246,43 +178,7 @@ export default function Index() {
         <span>© 2026 · Пространство красоты «Акценты»</span>
       </footer>
 
-      {active && (
-        <div
-          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 bg-primary/40 backdrop-blur-sm animate-in fade-in"
-          onClick={() => setActive(null)}
-        >
-          <div
-            className="bg-card rounded-3xl max-w-lg w-full p-8 sm:p-10 shadow-2xl relative animate-in slide-in-from-bottom-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setActive(null)}
-              className="absolute top-6 right-6 text-muted-foreground hover:text-accent transition-colors"
-            >
-              <Icon name="X" size={22} />
-            </button>
-            <span className="font-display text-lg text-muted-foreground">{active.id}</span>
-            <p className="text-xs italic text-accent mt-4 mb-1">{active.latin}</p>
-            <h3 className="font-display text-4xl mb-6">{active.name}</h3>
-            <p className="text-muted-foreground leading-relaxed mb-8">{active.description}</p>
-            <div className="grid grid-cols-2 gap-px bg-border rounded-xl overflow-hidden">
-              {[
-                { icon: 'Network', label: 'Семейство', value: active.family },
-                { icon: 'Ruler', label: 'Размер', value: active.size },
-                { icon: 'MapPin', label: 'Ареал', value: active.habitat },
-                { icon: 'Users', label: 'Колония', value: active.colony },
-              ].map((row) => (
-                <div key={row.label} className="bg-card p-4">
-                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
-                    <Icon name={row.icon} size={13} /> {row.label}
-                  </div>
-                  <p className="text-sm font-medium">{row.value}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
+
     </div>
   );
 }
