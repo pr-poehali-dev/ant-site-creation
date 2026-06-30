@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 const HERO_IMG =
-  'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/33448d70-ac9e-43c1-9a0c-24665bfff603.jpg';
+  'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/89d557a9-b914-4fcb-891c-612c2bedc8b3.jpg';
 
 interface Species {
   id: string;
@@ -103,12 +103,12 @@ export default function Index() {
       <header className="fixed top-0 z-40 w-full backdrop-blur-md bg-background/70 border-b border-border/60">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="font-display text-2xl tracking-tight">
-            Мирмекс<span className="text-accent">.</span>
+            Акценты<span className="text-accent">.</span>
           </span>
           <nav className="hidden sm:flex gap-8 text-sm text-muted-foreground">
             <a href="#hero" className="hover:text-accent transition-colors">Главная</a>
-            <a href="#species" className="hover:text-accent transition-colors">Виды</a>
-            <a href="#about" className="hover:text-accent transition-colors">О проекте</a>
+            <a href="#species" className="hover:text-accent transition-colors">Услуги</a>
+            <a href="#about" className="hover:text-accent transition-colors">О салоне</a>
           </nav>
         </div>
       </header>
@@ -117,35 +117,40 @@ export default function Index() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="reveal text-accent text-sm tracking-[0.3em] uppercase mb-6">
-              Энциклопедия насекомых
+              Пространство красоты «Акценты»
             </p>
-            <h1 className="reveal font-display text-6xl md:text-7xl leading-[0.95] mb-8" style={{ animationDelay: '0.1s' }}>
-              Тихие
+            <h1 className="reveal font-display text-5xl md:text-6xl leading-[1.02] mb-8" style={{ animationDelay: '0.1s' }}>
+              Красота рядом с домом —
               <br />
-              архитекторы
-              <br />
-              <span className="italic text-accent">земли</span>
+              <span className="italic text-accent">без очередей и спешки</span>
             </h1>
             <p className="reveal text-lg text-muted-foreground max-w-md leading-relaxed" style={{ animationDelay: '0.2s' }}>
-              Более 14 000 видов, 140 миллионов лет эволюции и сложнейшие
-              сообщества. Исследуйте мир муравьёв — вид за видом.
+              Пространство красоты «Акценты» в Советском районе. Стрижки,
+              маникюр, брови и уходы — у мастеров с душой. Запись за 1 минуту.
             </p>
             <a
-              href="#species"
+              href="#booking"
               className="reveal inline-flex items-center gap-2 mt-10 px-7 py-3.5 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:bg-accent transition-colors"
               style={{ animationDelay: '0.3s' }}
             >
-              Смотреть виды
-              <Icon name="ArrowDown" size={16} />
+              Записаться онлайн
+              <Icon name="ArrowRight" size={16} />
             </a>
+            <p className="reveal text-sm text-muted-foreground mt-5 leading-relaxed" style={{ animationDelay: '0.35s' }}>
+              Работаем ежедневно 9:00–20:00 · ул. Брусничная, 3
+              <br />
+              <a href="tel:+79089999105" className="text-foreground font-medium hover:text-accent transition-colors">
+                +7 (908) 999-91-05
+              </a>
+            </p>
           </div>
           <div className="reveal relative" style={{ animationDelay: '0.25s' }}>
             <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/10">
-              <img src={HERO_IMG} alt="Муравей крупным планом" className="w-full h-full object-cover" />
+              <img src={HERO_IMG} alt="Интерьер салона красоты «Акценты»" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-5 -left-5 bg-card border border-border rounded-2xl px-5 py-4 shadow-lg">
-              <p className="font-display text-3xl">14 000+</p>
-              <p className="text-xs text-muted-foreground tracking-wide">известных видов</p>
+              <p className="font-display text-3xl">9:00–20:00</p>
+              <p className="text-xs text-muted-foreground tracking-wide">ежедневно без выходных</p>
             </div>
           </div>
         </div>
