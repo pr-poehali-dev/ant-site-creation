@@ -199,23 +199,51 @@ export default function Index() {
       </section>
 
       <section id="about" className="px-6 py-24 bg-secondary/40 border-y border-border">
-        <div className="max-w-3xl mx-auto text-center">
-          <Icon name="Bug" size={32} className="mx-auto text-accent mb-8" />
-          <h2 className="font-display text-4xl md:text-5xl mb-6 leading-tight">
-            Муравьи существуют дольше,
-            <br />чем цветковые растения
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            Их совокупная биомасса сопоставима с биомассой всего человечества.
-            Они строят города, ведут сельское хозяйство и войны — задолго до
-            того, как этому научились мы.
-          </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl mb-6 leading-tight">
+              Устали от салонов, где вы —
+              <br />
+              <span className="italic text-accent">просто следующий номер в очереди?</span>
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
+              В «Акцентах» каждый визит — это забота, а не поток. Мы работаем
+              в уютном пространстве Советского района, куда удобно заехать по
+              пути домой или после работы. Здесь вас знают по имени.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden">
+            {[
+              {
+                emoji: '🕐',
+                title: 'Удобно',
+                text: 'Ежедневно 9:00–20:00, запись онлайн или по WhatsApp',
+              },
+              {
+                emoji: '⭐',
+                title: 'Качественно',
+                text: 'Рейтинг 5.0 на 2ГИС · 79 оценок · проверенные мастера',
+              },
+              {
+                emoji: '💰',
+                title: 'Честно',
+                text: 'Фиксированные цены без скрытых доплат',
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-card px-8 py-10 flex flex-col gap-4">
+                <span className="text-3xl">{item.emoji}</span>
+                <h3 className="font-display text-2xl">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <footer className="px-6 py-12 max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <span className="font-display text-xl text-foreground">Мирмекс<span className="text-accent">.</span></span>
-        <span>© 2026 · Энциклопедия муравьёв</span>
+        <span className="font-display text-xl text-foreground">Акценты<span className="text-accent">.</span></span>
+        <span>© 2026 · Пространство красоты «Акценты»</span>
       </footer>
 
       {active && (
