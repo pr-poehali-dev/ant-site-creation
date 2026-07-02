@@ -311,6 +311,14 @@ export default function Index() {
               >
                 <span className="text-lg">✈️</span> Telegram
               </a>
+              <a
+                href="https://max.ru/+79089999105"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
+              >
+                <span className="text-lg">💙</span> MAX
+              </a>
             </div>
 
             <div className="mt-10 flex items-start gap-3 text-sm text-primary-foreground/60">
