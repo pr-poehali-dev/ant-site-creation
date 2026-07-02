@@ -17,9 +17,11 @@ export default function Index() {
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/20">
       <header className="fixed top-0 z-40 w-full backdrop-blur-md bg-background/70 border-b border-border/60">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="font-display text-2xl tracking-tight">
-            Акценты<span className="text-accent">.</span>
-          </span>
+          <img
+            src="https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/bucket/4048d7f8-9d7c-46c8-b88e-73cbe980c618.png"
+            alt="Акценты"
+            className="h-9 w-auto"
+          />
           <a
             href="#booking"
             className="text-sm font-medium px-5 py-2 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-colors"
