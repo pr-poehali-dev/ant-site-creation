@@ -23,7 +23,9 @@ export default function Index() {
             className="h-9 w-auto"
           />
           <a
-            href="#booking"
+            href="https://link.2gis.ru/1.2/3FC4579C/online/20260701/project25/70000001084076462/null/Begt63D986304dBI3849A1J3IH2Hgf5myjF004ded-2929J28G4IA032chd-70B585G4G2B2A66240A7484HA3ifB6ff5eA8d66839J7H00010952HI46HJIHGI4Gd3?https://n1281292.yclients.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm font-medium px-5 py-2 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-colors"
           >
             Записаться
@@ -47,7 +49,9 @@ export default function Index() {
               маникюр, брови и уходы — у мастеров с душой. Запись за 1 минуту.
             </p>
             <a
-              href="#booking"
+              href="https://link.2gis.ru/1.2/3FC4579C/online/20260701/project25/70000001084076462/null/Begt63D986304dBI3849A1J3IH2Hgf5myjF004ded-2929J28G4IA032chd-70B585G4G2B2A66240A7484HA3ifB6ff5eA8d66839J7H00010952HI46HJIHGI4Gd3?https://n1281292.yclients.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="reveal inline-flex items-center gap-2 mt-10 px-7 py-3.5 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:bg-accent transition-colors"
               style={{ animationDelay: '0.3s' }}
             >
@@ -372,15 +376,17 @@ export default function Index() {
                     <option value="makeup" className="bg-foreground text-background">💄 Макияж</option>
                   </select>
                 </div>
-                <button
-                  type="submit"
+                <a
+                  href="https://link.2gis.ru/1.2/3FC4579C/online/20260701/project25/70000001084076462/null/Begt63D986304dBI3849A1J3IH2Hgf5myjF004ded-2929J28G4IA032chd-70B585G4G2B2A66240A7484HA3ifB6ff5eA8d66839J7H00010952HI46HJIHGI4Gd3?https://n1281292.yclients.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full bg-primary-foreground text-primary font-medium py-3.5 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                 >
                   Записаться
                   <Icon name="ArrowRight" size={16} />
-                </button>
+                </a>
                 <p className="text-xs text-primary-foreground/50 text-center">
-                  Перезвоним в течение 15 минут в рабочее время
+                  Записаться онлайн через 2ГИС
                 </p>
               </form>
             )}
