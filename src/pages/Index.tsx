@@ -296,22 +296,6 @@ export default function Index() {
 
             <div className="flex flex-col gap-3">
               <a
-                href="https://wa.me/79089999105"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
-              >
-                <span className="text-lg">📱</span> WhatsApp
-              </a>
-              <a
-                href="https://t.me/+79089999105"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
-              >
-                <span className="text-lg">✈️</span> Telegram
-              </a>
-              <a
                 href="tel:+79089999105"
                 className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
               >
