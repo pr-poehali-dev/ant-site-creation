@@ -293,7 +293,7 @@ export default function Index() {
                 href="tel:+79089999105"
                 className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
               >
-                <span className="text-lg">📞</span> +7 (908) 999-91-05
+                <Icon name="Phone" size={20} /> +7 (908) 999-91-05
               </a>
               <a
                 href="https://wa.me/79089999105"
@@ -301,7 +301,11 @@ export default function Index() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
               >
-                <span className="text-lg">💬</span> WhatsApp
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill="#25D366"/>
+                  <path d="M16.75 14.37c-.25-.125-1.478-.728-1.707-.812-.228-.083-.394-.125-.56.125-.166.25-.644.812-.79.979-.145.166-.29.187-.54.062-.25-.124-1.055-.389-2.008-1.239-.742-.662-1.243-1.48-1.388-1.729-.146-.25-.016-.385.11-.51.113-.112.25-.291.375-.437.124-.146.166-.25.25-.416.083-.167.041-.313-.021-.438-.062-.125-.56-1.354-.768-1.854-.203-.486-.408-.42-.56-.428l-.479-.008c-.166 0-.436.062-.664.312-.228.25-.873.853-.873 2.082 0 1.229.893 2.416 1.018 2.582.124.166 1.757 2.682 4.258 3.762.595.257 1.06.41 1.42.525.597.19 1.14.163 1.569.099.479-.071 1.478-.604 1.686-1.187.208-.583.208-1.083.146-1.187-.063-.105-.23-.167-.48-.292z" fill="white"/>
+                </svg>
+                WhatsApp
               </a>
               <a
                 href="https://t.me/+79089999105"
@@ -309,7 +313,11 @@ export default function Index() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
               >
-                <span className="text-lg">✈️</span> Telegram
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" fill="#2AABEE"/>
+                  <path d="M17.45 7.2L15.33 17.1c-.16.7-.58.87-1.17.54l-3.23-2.38-1.56 1.5c-.17.17-.32.32-.65.32l.23-3.3 5.98-5.4c.26-.23-.06-.36-.4-.13L6.53 13.2 3.35 12.2c-.69-.22-.7-.69.14-.97l12.7-4.9c.57-.21 1.07.14.86.87H17.45z" fill="white"/>
+                </svg>
+                Telegram
               </a>
               <a
                 href="https://max.ru/+79089999105"
@@ -317,7 +325,11 @@ export default function Index() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 rounded-full text-sm font-medium transition-colors"
               >
-                <span className="text-lg">💙</span> MAX
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="6" fill="#0077FF"/>
+                  <path d="M12 5C8.134 5 5 8.134 5 12s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm3.5 9.5h-1.75v-3.25L12 13.5l-1.75-2.25V14.5H8.5v-5h1.75l1.75 2.25 1.75-2.25H15.5v5z" fill="white"/>
+                </svg>
+                MAX
               </a>
             </div>
 
