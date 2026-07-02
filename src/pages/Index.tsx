@@ -201,25 +201,19 @@ export default function Index() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
             {[
-              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/31856dff-d09b-4cbc-8348-c7e28a4c8872.jpg', cat: '💅 Маникюр', label: 'Нюд-маникюр · гель-лак', price: 'от 2 900 ₽' },
-              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/78544b81-1792-4b71-bfb5-7e495b65c670.jpg', cat: '💅 Маникюр', label: 'Миндаль · натуральные оттенки', price: 'от 2 900 ₽' },
-              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/59dbec12-1720-4e09-a978-9835e1aefe48.jpg', cat: '🌿 Брови', label: 'Ламинирование бровей', price: 'от 2 300 ₽' },
-              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/a1b4cdbf-aa02-4db3-84c2-90ed11a9c73e.jpg', cat: '✂️ Волосы', label: 'Укладка + стрижка', price: 'от 2 200 ₽' },
-              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/7d167e63-43d1-41fc-bb01-8dbfa0b6c794.jpg', cat: '🦶 Педикюр', label: 'Педикюр + гель-лак · нюд', price: 'от 3 300 ₽' },
-              { img: 'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/a29c2d99-7ef4-4ba2-b837-ea6d0a201b46.jpg', cat: '🦶 Педикюр', label: 'Педикюр · французский', price: 'от 2 800 ₽' },
-            ].map((item, i) => (
-              <div key={i} className="group relative aspect-square overflow-hidden rounded-2xl bg-muted">
+              'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/bucket/ea0bd279-8584-4bb6-862d-b199a256899e.jpg',
+              'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/bucket/b9dcd3b8-e073-4a9e-8209-e870e1bb73a5.jpg',
+              'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/bucket/71fb2acc-e404-4803-b7d2-412356e00ee4.jpg',
+              'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/bucket/0b106b5a-bf36-4b03-bcda-a9af0b2327d7.jpg',
+              'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/bucket/fbe8224c-5b97-4bfe-af56-a38ad6cebf67.jpg',
+              'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/bucket/7a517462-410e-40a1-921f-7d17df30518e.jpg',
+            ].map((img, i) => (
+              <div key={i} className="relative aspect-square overflow-hidden rounded-2xl bg-muted">
                 <img
-                  src={item.img}
-                  alt={item.label}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src={img}
+                  alt={`Работа ${i + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <p className="text-xs text-primary-foreground/70 mb-0.5">{item.cat}</p>
-                  <p className="text-sm font-medium text-primary-foreground leading-tight">{item.label}</p>
-                  <p className="text-xs text-primary-foreground/80 mt-1">{item.price}</p>
-                </div>
               </div>
             ))}
           </div>
