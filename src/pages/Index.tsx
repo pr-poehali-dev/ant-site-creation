@@ -353,43 +353,7 @@ export default function Index() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                <div>
-                  <label className="block text-xs text-primary-foreground/60 mb-2 tracking-wide">Ваше имя</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Анна"
-                    value={form.name}
-                    onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                    className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-xl px-4 py-3 text-sm placeholder:text-primary-foreground/30 focus:outline-none focus:border-primary-foreground/50 transition-colors"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs text-primary-foreground/60 mb-2 tracking-wide">Телефон / WhatsApp</label>
-                  <input
-                    type="tel"
-                    required
-                    placeholder="+7 (___) ___-__-__"
-                    value={form.phone}
-                    onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
-                    className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-xl px-4 py-3 text-sm placeholder:text-primary-foreground/30 focus:outline-none focus:border-primary-foreground/50 transition-colors"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs text-primary-foreground/60 mb-2 tracking-wide">Услуга</label>
-                  <select
-                    value={form.service}
-                    onChange={e => setForm(f => ({ ...f, service: e.target.value }))}
-                    className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary-foreground/50 transition-colors appearance-none"
-                  >
-                    <option value="" className="bg-foreground text-background">Выберите услугу</option>
-                    <option value="nails" className="bg-foreground text-background">💅 Ногтевой сервис</option>
-                    <option value="hair" className="bg-foreground text-background">✂️ Парикмахерский зал</option>
-                    <option value="brows" className="bg-foreground text-background">🌿 Брови и ресницы</option>
-                    <option value="makeup" className="bg-foreground text-background">💄 Макияж</option>
-                  </select>
-                </div>
+              <div className="flex flex-col gap-5 items-center justify-center min-h-[280px]">
                 <a
                   href="https://link.2gis.ru/1.2/3FC4579C/online/20260701/project25/70000001084076462/null/Begt63D986304dBI3849A1J3IH2Hgf5myjF004ded-2929J28G4IA032chd-70B585G4G2B2A66240A7484HA3ifB6ff5eA8d66839J7H00010952HI46HJIHGI4Gd3?https://n1281292.yclients.com"
                   target="_blank"
@@ -402,7 +366,7 @@ export default function Index() {
                 <p className="text-xs text-primary-foreground/50 text-center">
                   Записаться онлайн через 2ГИС
                 </p>
-              </form>
+              </div>
             )}
           </div>
         </div>
