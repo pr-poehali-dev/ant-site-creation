@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 const HERO_IMG =
-  'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/files/89d557a9-b914-4fcb-891c-612c2bedc8b3.jpg';
+  'https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/bucket/9aea9d83-3a33-4f28-9a45-933bbf5d5af7.jpg';
 
 export default function Index() {
   const [form, setForm] = useState({ name: '', phone: '', service: '' });
