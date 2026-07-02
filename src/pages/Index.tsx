@@ -389,7 +389,11 @@ export default function Index() {
       </section>
 
       <footer className="px-6 py-10 max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <span className="font-display text-xl text-foreground">Акценты<span className="text-accent">.</span></span>
+        <img
+          src="https://cdn.poehali.dev/projects/dd60c00c-701b-431c-8b6f-12366a8f36c4/bucket/4048d7f8-9d7c-46c8-b88e-73cbe980c618.png"
+          alt="Акценты"
+          className="h-8 w-auto"
+        />
         <span>© 2026 · Пространство красоты «Акценты» · Владивосток</span>
       </footer>
 
