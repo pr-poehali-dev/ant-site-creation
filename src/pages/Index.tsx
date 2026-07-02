@@ -380,6 +380,9 @@ export default function Index() {
         />
         <span>© 2026 · Пространство красоты «Акценты» · Владивосток</span>
       </footer>
+      <div className="px-6 pb-8 text-center text-xs text-muted-foreground/50">
+        ИП Стихина Олеся Эдуардовна · ИНН 253813275195 · ОГРНИП 324253600013288
+      </div>
 
 
     </div>
